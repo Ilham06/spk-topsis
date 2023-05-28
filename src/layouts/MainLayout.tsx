@@ -12,10 +12,23 @@ import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import AdbIcon from "@mui/icons-material/Adb";
-import { Outlet } from "react-router-dom";
+import { Outlet, useNavigate } from "react-router-dom";
 import { CssBaseline } from "@mui/material";
 
-const pages = ["Alternatif", "Criteria", "Penentuan nilai"];
+const pages = [
+  {
+    title: 'Alternatif',
+    path: '/alternative'
+  },
+  {
+    title: 'Kriteria',
+    path: '/criteria'
+  },
+  {
+    title: 'Perhitungan',
+    path: '/calculate'
+  }
+];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 
 function MainLayout() {
@@ -25,6 +38,8 @@ function MainLayout() {
   const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
     null
   );
+
+  const navigate = useNavigate();
 
   const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
     setAnchorElNav(event.currentTarget);
@@ -40,6 +55,10 @@ function MainLayout() {
   const handleCloseUserMenu = () => {
     setAnchorElUser(null);
   };
+
+  const handleClickMenu = (path: string) => {
+    navigate(path)
+  }
 
   return (
     <>
@@ -63,7 +82,7 @@ function MainLayout() {
                 textDecoration: "none",
               }}
             >
-              LOGO
+              SPK TOPSIS
             </Typography>
 
             <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
@@ -96,8 +115,8 @@ function MainLayout() {
                 }}
               >
                 {pages.map((page) => (
-                  <MenuItem key={page} onClick={handleCloseNavMenu}>
-                    <Typography textAlign="center">{page}</Typography>
+                  <MenuItem key={page.title} onClick={handleCloseNavMenu}>
+                    <Typography textAlign="center">{page.title}</Typography>
                   </MenuItem>
                 ))}
               </Menu>
@@ -124,12 +143,12 @@ function MainLayout() {
             <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
               {pages.map((page) => (
                 <Button
-                  key={page}
-                  onClick={handleCloseNavMenu}
-                  sx={{ my: 2, color: "white", display: "block" }}
-                >
-                  {page}
-                </Button>
+                key={page.title}
+                sx={{ my: 2, color: "white", display: "block" }}
+                onClick={() => handleClickMenu(page.path)}
+              >
+                {page.title}
+              </Button>
               ))}
             </Box>
 

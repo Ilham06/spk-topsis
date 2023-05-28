@@ -79,16 +79,9 @@ export default function Edit() {
 
   return (
     <>
-      <Box className="header">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography className="section-header">Edit Criteria</Typography>
-        </Box>
+      <Box sx={{ mb: 2 }}
+      >
+        <Typography className="card-title">Edit Criteria</Typography>
       </Box>
       <Grid container>
         <Grid item md={6}>
@@ -99,7 +92,7 @@ export default function Edit() {
                 className="input_form"
                 id="code"
                 name="code"
-                label="Code"
+                label="Kode Kriteria"
                 type="text"
                 value={formik.values.code}
                 onChange={formik.handleChange}
@@ -114,7 +107,7 @@ export default function Edit() {
                 className="input_form"
                 id="name"
                 name="name"
-                label="Name"
+                label="Nama Kriteria"
                 type="text"
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -131,7 +124,7 @@ export default function Edit() {
                 className="input_form"
                 id="note"
                 name="note"
-                label="Note"
+                label="Catatan"
                 type="text"
                 value={formik.values.note}
                 onChange={formik.handleChange}

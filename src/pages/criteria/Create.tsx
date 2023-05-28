@@ -64,16 +64,9 @@ export default function Create() {
 
   return (
     <>
-      <Box className="header">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography className="section-header">Tambah Criteria</Typography>
-        </Box>
+      <Box sx={{ mb: 2 }}
+      >
+        <Typography className="card-title">Tambah Kriteria</Typography>
       </Box>
       <Grid container>
         <Grid item md={6}>
@@ -84,7 +77,7 @@ export default function Create() {
                 className="input_form"
                 id="code"
                 name="code"
-                label="Code"
+                label="Kode Kriteria"
                 type="text"
                 value={formik.values.code}
                 onChange={formik.handleChange}
@@ -99,7 +92,7 @@ export default function Create() {
                 className="input_form"
                 id="name"
                 name="name"
-                label="Name"
+                label="Nama Kriteria"
                 type="text"
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -116,7 +109,7 @@ export default function Create() {
                 className="input_form"
                 id="note"
                 name="note"
-                label="Note"
+                label="Catatan"
                 type="text"
                 value={formik.values.note}
                 onChange={formik.handleChange}

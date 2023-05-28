@@ -47,33 +47,26 @@ export default function Create() {
         })
       );
 
-      navigate('/alternative')
+      navigate("/alternative");
     },
   });
 
   return (
     <>
-      <Box className="header">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography className="section-header">Tambah Alternatif</Typography>
-        </Box>
+      <Box sx={{ mb: 2 }}
+      >
+        <Typography className="card-title">Tambah Alternatif</Typography>
       </Box>
       <Grid container>
         <Grid item md={6}>
-          <Card className="main_card" sx={{ p: 4 }}>
+          <Card className="main-card" sx={{ py: 4, px: 2 }}>
             <form onSubmit={formik.handleSubmit}>
               <TextField
                 fullWidth
                 className="input_form"
                 id="code"
                 name="code"
-                label="Code"
+                label="Kode Alternatif"
                 type="text"
                 value={formik.values.code}
                 onChange={formik.handleChange}
@@ -88,7 +81,7 @@ export default function Create() {
                 className="input_form"
                 id="name"
                 name="name"
-                label="Name"
+                label="Nama Alternatif"
                 type="text"
                 value={formik.values.name}
                 onChange={formik.handleChange}
@@ -105,7 +98,7 @@ export default function Create() {
                 className="input_form"
                 id="note"
                 name="note"
-                label="Note"
+                label="Catatan"
                 type="text"
                 value={formik.values.note}
                 onChange={formik.handleChange}

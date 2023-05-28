@@ -3,6 +3,7 @@ export interface AlternativeType {
   code: string;
   name: string;
   note?: string;
+  criterias?: AlternativeCriteriaType[];
 }
 
 export interface CriteriaType {
@@ -12,4 +13,10 @@ export interface CriteriaType {
   note?: string;
   weight: number;
   attribute: string;
+}
+
+export interface AlternativeCriteriaType {
+  alternative_code: string;
+  criteria_code: string;
+  value: number;
 }

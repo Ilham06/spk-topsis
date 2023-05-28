@@ -6,7 +6,8 @@ const initialState: AlternativeType[] = [
     id: '',
     code: '',
     name: '',
-    note: ''
+    note: '',
+    criterias: []
   },
 ];
 

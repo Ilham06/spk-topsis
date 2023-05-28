@@ -9,6 +9,9 @@ import Criteria from "../pages/criteria/List";
 import CreateCriteria from "../pages/criteria/Create";
 import EditCriteria from "../pages/criteria/Edit";
 
+import Calculate from "../pages/calculate/Calculate";
+import UpdateMatrix from "../pages/calculate/Create";
+
 export default function Router() {
   let element = useRoutes([
     {
@@ -21,6 +24,8 @@ export default function Router() {
         { path: "criteria", element: <Criteria /> },
         { path: "criteria/create", element: <CreateCriteria /> },
         { path: "criteria/edit/:id", element: <EditCriteria /> },
+        { path: "calculate", element: <Calculate /> },
+        { path: "calculate/update/:id", element: <UpdateMatrix /> },
       ],
       
     },

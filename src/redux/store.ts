@@ -11,8 +11,8 @@ import {
 import storage from 'redux-persist/lib/storage';
 import { combineReducers } from '@reduxjs/toolkit';
 import alternativeReducer from './alternative/alternativeSlice';
-import criteriaReducer from './criteria/criteriaSlice';
 import criteriaSlice from './criteria/criteriaSlice';
+import alternativeCriteriaReducer from './alternative-criteria/alternativeCriteriaSlice';
 
 const persistConfig = {
   key: 'root',
@@ -23,6 +23,7 @@ const persistConfig = {
 const rootReducer = combineReducers({
   alternative: alternativeReducer,
   criteria: criteriaSlice,
+  alternativeCriteria: alternativeCriteriaReducer
 });
 
 const persistedReducer = persistReducer(persistConfig, rootReducer);

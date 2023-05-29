@@ -91,20 +91,13 @@ export default function Edit() {
 
   return (
     <>
-      <Box className="header">
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography className="section-header">Tambah Alternatif</Typography>
-        </Box>
+      <Box sx={{ mb: 2 }}
+      >
+        <Typography className="card-title">Update Nilai Perbandingan</Typography>
       </Box>
       <Grid container>
         <Grid item md={6}>
-          <Card className="main_card" sx={{ p: 4 }}>
+          <Card className="main-card" sx={{ py: 4, px: 2 }}>
             <FormikProvider value={formik}>
               <form onSubmit={formik.handleSubmit}>
                 <FieldArray name="criterias">

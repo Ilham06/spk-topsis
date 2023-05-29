@@ -11,13 +11,14 @@ import EditCriteria from "../pages/criteria/Edit";
 
 import Calculate from "../pages/calculate/Calculate";
 import UpdateMatrix from "../pages/calculate/Create";
+import Results from "../pages/calculate/Results";
 
 export default function Router() {
   let element = useRoutes([
     {
       element: <MainLayout />,
       children: [
-        { path: "/", element: <Home /> },
+        { path: "/", element: <Alternative /> },
         { path: "alternative", element: <Alternative /> },
         { path: "alternative/create", element: <Create /> },
         { path: "alternative/edit/:id", element: <Edit /> },
@@ -26,6 +27,7 @@ export default function Router() {
         { path: "criteria/edit/:id", element: <EditCriteria /> },
         { path: "calculate", element: <Calculate /> },
         { path: "calculate/update/:id", element: <UpdateMatrix /> },
+        { path: "result", element: <Results /> },
       ],
       
     },

@@ -85,7 +85,7 @@ export default function Edit() {
       </Box>
       <Grid container>
         <Grid item md={6}>
-          <Card className="main_card" sx={{ p: 4 }}>
+          <Card className="main_card" sx={{ py: 4, px: 2 }}>
             <form onSubmit={formik.handleSubmit}>
               <TextField
                 fullWidth

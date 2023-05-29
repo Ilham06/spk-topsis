@@ -1,5 +1,5 @@
 import { PayloadAction, createSlice } from '@reduxjs/toolkit';
-import { AlternativeCriteriaType, AlternativeType } from '../../model';
+import { AlternativeCriteriaType } from '../../model';
 
 const initialState: AlternativeCriteriaType[] = [
   {

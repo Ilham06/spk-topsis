@@ -1,14 +1,11 @@
 import {
   Box,
   Typography,
-  Breadcrumbs,
   Button,
   Card,
-  Link,
   TextField,
   Grid,
 } from "@mui/material";
-import React from "react";
 import { useNavigate } from "react-router-dom";
 import * as yup from "yup";
 import { AlternativeType } from "../../model";

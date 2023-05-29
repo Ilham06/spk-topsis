@@ -7,11 +7,10 @@ import Paper from "@mui/material/Paper";
 import DeleteIcon from "@mui/icons-material/Delete";
 import CreateIcon from "@mui/icons-material/Create";
 import AddBoxIcon from "@mui/icons-material/AddBox";
-import { Box, Button, Card, IconButton, Typography } from "@mui/material";
+import { Box, Card, IconButton, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { AlternativeType, CriteriaType } from "../../model";
-import { deleteAlternative } from "../../redux/alternative/alternativeSlice";
+import { CriteriaType } from "../../model";
 import { deleteCriteria } from "../../redux/criteria/criteriaSlice";
 
 export default function List() {

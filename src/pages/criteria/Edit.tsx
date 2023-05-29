@@ -1,10 +1,8 @@
 import {
   Box,
   Typography,
-  Breadcrumbs,
   Button,
   Card,
-  Link,
   TextField,
   Grid,
   FormControl,
@@ -12,17 +10,13 @@ import {
   MenuItem,
   Select,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import * as yup from "yup";
-import { AlternativeType, CriteriaType } from "../../model";
+import { CriteriaType } from "../../model";
 import { useFormik } from "formik";
 import Gap from "../../compoments/Gap";
 import { useDispatch, useSelector } from "react-redux";
-import {
-  addAlternative,
-  editAlternative,
-} from "../../redux/alternative/alternativeSlice";
 import { editCriteria } from "../../redux/criteria/criteriaSlice";
 
 const validationSchema = yup.object({

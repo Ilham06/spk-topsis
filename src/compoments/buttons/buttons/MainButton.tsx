@@ -1,6 +1,4 @@
-import { Button, InputAdornment, TextField } from '@mui/material'
-import React from 'react'
-import SearchIcon from '@mui/icons-material/Search';
+import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom';
 
 type IProps = {

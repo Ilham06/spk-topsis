@@ -1,5 +1,3 @@
-import { height } from "@mui/system";
-import React from "react";
 
 type GapType = {
   width: string | number;

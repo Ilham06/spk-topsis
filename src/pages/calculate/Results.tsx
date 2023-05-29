@@ -4,9 +4,9 @@ import TableCell from "@mui/material/TableCell";
 import TableHead from "@mui/material/TableHead";
 import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import { useNavigate } from "react-router-dom";
-import { useDispatch, useSelector } from "react-redux";
+import { useSelector } from "react-redux";
 import {
   AlternativeCriteriaType,
   AlternativeType,
@@ -21,7 +21,6 @@ import Gap from "../../compoments/Gap";
 
 export default function Results() {
   const navigate = useNavigate();
-  const dispatch = useDispatch();
   const alternative: AlternativeType[] = useSelector(
     (state: any) => state.alternative
   );

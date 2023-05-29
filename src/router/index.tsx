@@ -1,6 +1,5 @@
 import { useRoutes } from "react-router-dom";
 import MainLayout from "../layouts/MainLayout";
-import Home from "../pages/Home";
 import Alternative from "../pages/alternative/List";
 import Create from "../pages/alternative/Create";
 import Edit from "../pages/alternative/Edit";

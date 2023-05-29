@@ -1,14 +1,12 @@
 import {
   Box,
   Typography,
-  Breadcrumbs,
   Button,
   Card,
-  Link,
   TextField,
   Grid,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import * as yup from "yup";
 import {
@@ -20,7 +18,6 @@ import { FieldArray, FormikProvider, useFormik } from "formik";
 import Gap from "../../compoments/Gap";
 import { useDispatch, useSelector } from "react-redux";
 import {
-  addAlternative,
   editAlternative,
 } from "../../redux/alternative/alternativeSlice";
 import { addAlternativeCriteria } from "../../redux/alternative-criteria/alternativeCriteriaSlice";

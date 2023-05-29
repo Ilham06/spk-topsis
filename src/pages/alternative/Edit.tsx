@@ -1,21 +1,19 @@
 import {
   Box,
   Typography,
-  Breadcrumbs,
   Button,
   Card,
-  Link,
   TextField,
   Grid,
 } from "@mui/material";
-import React, { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import * as yup from "yup";
 import { AlternativeType } from "../../model";
 import { useFormik } from "formik";
 import Gap from "../../compoments/Gap";
 import { useDispatch, useSelector } from "react-redux";
-import { addAlternative, editAlternative } from "../../redux/alternative/alternativeSlice";
+import { editAlternative } from "../../redux/alternative/alternativeSlice";
 
 const validationSchema = yup.object({
   code: yup.string().required("Code is required"),
